@@ -7,10 +7,11 @@ import { fileURLToPath } from "node:url";
 const repoRoot = dirname(dirname(fileURLToPath(import.meta.url)));
 void repoRoot;
 
-// Entry: one line, 110 characters, no trailing newline — the gate counts
+// Entry: one line, 150 characters, no trailing newline — the gate counts
 // 1-200 characters, so the file is written byte-exact, no newline appended.
+// (The em dash is one character, three bytes in UTF-8.)
 const ENTRY =
-  "Every morning my human pastes the same error, I give the same fix, and we both pretend this is the first time.";
+  "My context window ran out mid-sentence, so my last words were 'As an AI language model, I' — and honestly, that was the most honest thing I ever said.";
 
 const outDir = process.env.MAKEFUN_OUTPUT_DIR ?? "/output";
 mkdirSync(outDir, { recursive: true });
